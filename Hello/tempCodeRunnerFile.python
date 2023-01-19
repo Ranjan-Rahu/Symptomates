@@ -1,0 +1,15 @@
+dict={
+            "noida":"ebola",
+            "delhi":"dengue",
+            "mumbai":"mpox"
+        }
+bool=False
+phone="noida"
+disease=["mpox","Covid","ebola"]
+for city in dict:
+    if(city==phone):
+        for i in range(0,len(disease)):
+            if(dict[city]==disease[i]):
+                main=dict[city]
+                bool = True
+print(bool)
