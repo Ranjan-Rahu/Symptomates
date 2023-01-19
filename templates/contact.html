@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0 mb-3" >
+    <img src="https://source.unsplash.com/1200x400/?health,technology" class="d-block w-100 mx-0" alt="...">
+</div>
+<div class="container mb-3 py-4">
+    <h1 class="text-center">Contact Us</h1>
+    <form method="post" action="/contact">
+    {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">City</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your City">
+        </div>      
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="age" class="form-control" id="age" name="age" placeholder="Enter your Age">
+        </div>      
+           
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="gender" class="form-control" id="gender" name="gender" placeholder="Enter 
+your Gender">
+        </div>      
+        <div class="form-group">
+            <label for="symptoms">Symptoms</label>
+            <input type="symptoms" class="form-control" id="symptoms" name="symptoms" placeholder="Enter your Symptoms">
+        </div>      
+        
+        {% comment %} <div class="form-group">
+            <label for="desc">Tell me about what you want to contact me for...</label>
+            <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+        </div> {% endcomment %}
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>   
+    </form>
+
+</div>
+
+{% endblock body %}
