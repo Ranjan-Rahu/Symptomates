@@ -76,7 +76,7 @@ def contact(request):
             f=f.replace(",","")
             t+=f
             t+="\n"
-        email_sender = 'rahulkumar7870974924@gmail.com'
+        email_sender = os.environ.get("EMAIL")
         email_password=os.environ.get("EMAIL PASSWORD")
         email_receiver=email
         subject = 'Your Complications from Symptoms'
